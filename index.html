@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <script src="http://code.jquery.com/jquery-latest.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="css/style.css">
+<script type="text/javascript">
+  $(document).ready(function() {
+  var margin = 0; // переменная для контроля докрутки
+  $("a[href^='#']").click(function() { // тут пишите условия, для всех ссылок или для конкретных
+      $("html, body").animate({
+         scrollTop: $($(this).attr("href")).offset().top+margin+ "px" // .top+margin - ставьте минус, если хотите увеличить отступ
+      }, {
+         duration: 1000, // тут можно контролировать скорость
+         easing: "swing"
+      });
+      return false;
+   });
+});
+</script>
+
+<title>My CV</title>
+  </head>
+  <header class="header">
+    <div class="container">
+      <div class="header__inner">
+        <div class="header__logo"></div>
+        <nav class="header__nav">
+          <a class="nav__link" class=" scrollto"  href="#home">Home</a>
+          <a class="nav__link" class="scrollto" href="#p1">About Me</a>
+          <a class="nav__link" class=" scrollto" href="#p2">My projects</a>
+          <a class="nav__link" class=" scrollto" href="#p3">My contacts</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+  <body>
+    <div class="intro" id="home">
+<div class="container">
+  <div class="intro__inner">
+
+
+      <h1 class="intro__title">Welcome to My CV!</h1>
+
+      <a class="btn" class="scrollto" href="#p1"><b>Learn more</b></a>
+  </div>
+</div>
+  </div>
+
+<section class="section" id="aboutme">
+  <div class="container">
+    <div class="section__header">
+      <h3 class="section__title" id="p1">About Me</h3>
+      <h4 class="section__suptitle">Name</h4>
+      <div class="section__text">
+        Sergey Levchuk
+      </div>
+        <img class ="section__ava" src="images/ava.jpg" alt="My Photo" width="480" height="360" center>
+      <h3 class="section__title">About Me</h3>
+      <h4 class="section__suptitle">Name</h4>
+      <div class="section__text">
+        Sergey Levchuk
+        </div>
+      <h4 class="section__suptitle">My Skills</h4>
+      <div class="section__text">
+
+        <ul> Programming languages
+          <li>C++: Junior;</li>
+          <li>C#: Junior</li>
+          <li>Javascript: Junior</li>
+          <li>Ruby: in the process of studying;</li>
+          <li>HTML, CSS</li>
+
+        </ul>
+      </div>
+
+      <h4 class="section__suptitle">Education</h4>
+      <div class="section__text">
+        Radio Engineering Faculty, Volga State University, Russia, master's degree
+        </div>
+      <h4 class="section__suptitle">Location</h4>
+        <div class="section__text">
+          Yoshkar-Ola, Russia
+        </div>
+      <h4 class="section__suptitle">English level</h4>
+        <div class="section__text">
+          B2 level
+          </div>
+    </div>
+  </div>
+
+</section>
+
+<section class="section my_proj" id="Myprojects">
+    <div class="container">
+      <div class="section2__header">
+        <h3 class="section2__title" id="p2">My projects</h3>
+        <h4 class="section__suptitle">Harvester simulator on Unity with C# & JS</h4>
+      </div>
+      <div id="outer_container">
+<div id="thumbScroller">
+    <div class="container">
+        <div class="content">
+            <div><a href="#"><img src="images/harvest1.jpg" width=480px height=auto title="harvester" alt="harvester1" class="thumb" /></a></div>
+        </div>
+        <!--<div class="content">
+            <div><a href="#"><img src="images/harvest2.jpg" width=480px height=auto title="harvester" alt="harvester2" class="thumb" /></a></div>
+        </div>
+        <div class="content">
+            <div><a href="#"><img src="images/harvest3.jpg" width=480px height=auto title="harvester" alt="harvester3" class="thumb" /></a></div>
+        </div>
+      </div>-->
+    </div>
+</div>
+</div>
+    </div>
+</section>
+
+<section class="section my_contacts" id="Mycontacts">
+      <div class="container">
+        <div class="section2__header">
+          <h3 class="section2__title" id="p3">My Contacts</h3>
+        </div>
+        <div class="section2__text"><a class="link" href="https://vk.com/id148235353"  > <img src="images/vk.png" alt="VK" width=128px height=auto> </a>
+          <a class="link" href="https://github.com/elchupakabr1"  > <img src="images/git.png" alt="Github" width=128px height=auto> </a>
+          <a class="link" href="https://vk.com/id148235353"  > <img src="images/email.png" alt="E-mail" width=128px height=auto> </a>
+
+        </div>
+      </div>
+</section>
+  </body>
+</html>
